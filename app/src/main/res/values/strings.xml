@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MobilliumTask2</string>
+
+    <string name="day_detail">01 Nisan 2023</string>
+    <string name="day">Bugün</string>
+    <string name="degree">26°</string>
+    <string name="degree_gap">14° - 27°</string>
+    <string name="city_name">İstanbul</string>
+    <string name="weather">Güneşli</string>
+    <string name="wind">Rüzgar</string>
+    <string name="wind_speed">3 km/s</string>
+
+    <string name="day_friday">Cum, 05 Nisan</string>
+    <string name="day_thursday">Per, 04 Nisan</string>
+    <string name="day_wednesday">Çar, 03 Nisan</string>
+    <string name="day_tuesday">Sal, 02 Nisan</string>
+
+
+</resources>
