@@ -11,7 +11,7 @@ import com.example.mobilliumtask2.databinding.RvItemBinding
 class MainActivity : AppCompatActivity(), CustomAdapter.RecyclerViewEvent {
     private lateinit var cityDataList : ArrayList<CityData>
     private lateinit var binding : ActivityMainBinding
-    private lateinit var binding_ : RvItemBinding
+
 
 
 
@@ -24,8 +24,8 @@ class MainActivity : AppCompatActivity(), CustomAdapter.RecyclerViewEvent {
         cityDataList = ArrayList<CityData>()
 
         val istanbul = CityData("İstanbul", "26°", "14° - 27°", "Güneşli")
-        val ankara = CityData("Ankara", "26°", "14° - 27°", "Güneşli")
-        val erzurum = CityData("Erzurum", "26°", "14° - 27°", "Güneşli")
+        val ankara = CityData("Ankara", "25°", "14° - 27°", "Güneşli")
+        val erzurum = CityData("Erzurum", "24°", "14° - 27°", "Güneşli")
         val sakarya = CityData("Sakarya", "26°", "14° - 27°", "Güneşli")
 
         cityDataList.add(istanbul)
