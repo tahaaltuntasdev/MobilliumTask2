@@ -1,31 +1,28 @@
 package com.example.mobilliumtask2
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobilliumtask2.databinding.RvItemBinding
+import com.example.mobilliumtask2.part2.MainActivity2
 
 
 class CustomAdapter(
-    val cityDataList : ArrayList<CityData>,
-    val listener : RecyclerViewEvent
+    private val cityDataList: ArrayList<CityData>,
+    val listener: RecyclerViewEvent
 
 ):
     RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
-    inner class ViewHolder(val binding : RvItemBinding) : RecyclerView.ViewHolder(binding.root), View.OnClickListener {
+    inner class ViewHolder(val binding : RvItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
         init {
-            binding.rvItem.setOnClickListener(this)
-        }
-
-        override fun onClick(v: View?) {
+            binding.rvItem.setOnClickListener{
             val position = adapterPosition
             if (position != RecyclerView.NO_POSITION) {
                 listener.onItemClick(position)
+                }
             }
         }
-
     }
 
 
@@ -35,10 +32,10 @@ class CustomAdapter(
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-        viewHolder.binding.rvItemCityName.text = cityDataList.get(position).city
-        viewHolder.binding.rvItemDegree.text = cityDataList.get(position).degree
-        viewHolder.binding.rvItemWeather.text = cityDataList.get(position).weather
-        viewHolder.binding.rvItemDegreeGap.text = cityDataList.get(position).degreeGap
+        viewHolder.binding.rvItemCityName.text = cityDataList[position].city
+        viewHolder.binding.rvItemDegree.text = cityDataList[position].degree
+        viewHolder.binding.rvItemWeather.text = cityDataList[position].weather
+        viewHolder.binding.rvItemDegreeGap.text = cityDataList[position].degreeGap
     }
 
     override fun getItemCount(): Int {
@@ -47,8 +44,7 @@ class CustomAdapter(
 
     interface RecyclerViewEvent{
         fun onItemClick(position: Int)
+
     }
-
-
 
 }

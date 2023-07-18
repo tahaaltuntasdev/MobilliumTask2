@@ -1,18 +1,20 @@
-package com.example.mobilliumtask2
+package com.example.mobilliumtask2.part1
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.mobilliumtask2.CityData
+import com.example.mobilliumtask2.CustomAdapter
 import com.example.mobilliumtask2.databinding.ActivityMainBinding
 import com.example.mobilliumtask2.databinding.RvItemBinding
 
 
-class MainActivity : AppCompatActivity(), CustomAdapter.RecyclerViewEvent {
+class MainActivity : AppCompatActivity(),
+CustomAdapter.RecyclerViewEvent
+{
     private lateinit var cityDataList : ArrayList<CityData>
-    private lateinit var binding : ActivityMainBinding
-
-
+    private lateinit var binding: ActivityMainBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity(), CustomAdapter.RecyclerViewEvent {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
 
         cityDataList = ArrayList<CityData>()
 
@@ -54,4 +57,4 @@ class MainActivity : AppCompatActivity(), CustomAdapter.RecyclerViewEvent {
     }
 
 
-}
+    }

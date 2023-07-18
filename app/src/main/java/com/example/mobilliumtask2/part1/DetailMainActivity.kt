@@ -1,4 +1,4 @@
-package com.example.mobilliumtask2
+package com.example.mobilliumtask2.part1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,6 +16,7 @@ class DetailMainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        /*
         val cityData = intent.getStringExtra("city")
         binding.cityName.text = cityData
 
@@ -23,7 +24,7 @@ class DetailMainActivity : AppCompatActivity() {
         binding.weatherDegree.text = degreeData
 
 
-
+*/
     }
 
 }
