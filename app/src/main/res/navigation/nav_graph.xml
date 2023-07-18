@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainPageFragment2">
+
+    <fragment
+        android:id="@+id/detailPageFragment2"
+        android:name="com.example.mobilliumtask2.part3.DetailPageFragment2"
+        android:label="fragment_detail_page2"
+        tools:layout="@layout/fragment_detail_page2" >
+        <argument
+            android:name="city_data"
+            app:argType="com.example.mobilliumtask2.CityData" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainPageFragment2"
+        android:name="com.example.mobilliumtask2.part3.MainPageFragment2"
+        android:label="fragment_main_page2"
+        tools:layout="@layout/fragment_main_page2" >
+        <action
+            android:id="@+id/action_mainPageFragment2_to_detailPageFragment2"
+            app:destination="@id/detailPageFragment2" />
+    </fragment>
+
+</navigation>

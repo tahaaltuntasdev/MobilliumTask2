@@ -15,6 +15,5 @@ class MainActivity2 : AppCompatActivity()
         val view = binding.root
         setContentView(view)
 
-
     }
 }
