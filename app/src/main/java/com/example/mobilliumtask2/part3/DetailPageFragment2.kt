@@ -22,13 +22,13 @@ class DetailPageFragment2 : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        arguments.let {
+        /*arguments.let {
             val data = it?.let {
                 DetailPageFragment2Args.fromBundle(it).cityData
             }
             binding.weatherDegree.text = data?.degree
             binding.cityName.text = data?.city
-        }
+        }*/
 
     }
 

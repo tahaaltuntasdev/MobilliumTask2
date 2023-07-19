@@ -6,7 +6,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class CityData  (
     val city : String,
-    val degree : String,
+    var degree : String,
     val degreeGap : String,
     val weather : String
 ) : Parcelable

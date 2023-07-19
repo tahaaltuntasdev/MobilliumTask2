@@ -45,9 +45,9 @@ class MainPageFragment2 : Fragment(R.layout.fragment_main_page2), CustomAdapter.
     }
 
     override fun onItemClick(position: Int) {
-        findNavController().navigate(MainPageFragment2Directions.actionMainPageFragment2ToDetailPageFragment2(
-            cityDataList[position]))
-
-    }
+        /*  findNavController().navigate(MainPageFragment2Directions.actionMainPageFragment2ToDetailPageFragment2(
+              cityDataList[position]))
+  */
+      }
 
 }

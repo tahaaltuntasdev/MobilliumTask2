@@ -3,25 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainPageFragment2">
-
+    app:startDestination="@id/mainPageFragment3">
     <fragment
-        android:id="@+id/detailPageFragment2"
-        android:name="com.example.mobilliumtask2.part3.DetailPageFragment2"
-        android:label="fragment_detail_page2"
-        tools:layout="@layout/fragment_detail_page2" >
+        android:id="@+id/mainPageFragment3"
+        android:name="com.example.mobilliumtask2.part4.MainPageFragment3"
+        android:label="fragment_main_page3"
+        tools:layout="@layout/fragment_main_page3" >
+        <action
+            android:id="@+id/action_mainPageFragment3_to_detailPageFragment3"
+            app:destination="@id/detailPageFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPageFragment3"
+        android:name="com.example.mobilliumtask2.part4.DetailPageFragment3"
+        android:label="fragment_detail_page3"
+        tools:layout="@layout/fragment_detail_page3" >
         <argument
             android:name="city_data"
-            app:argType="com.example.mobilliumtask2.CityData" />
+            app:argType="com.example.mobilliumtask2.CityData"/>
     </fragment>
-    <fragment
-        android:id="@+id/mainPageFragment2"
-        android:name="com.example.mobilliumtask2.part3.MainPageFragment2"
-        android:label="fragment_main_page2"
-        tools:layout="@layout/fragment_main_page2" >
-        <action
-            android:id="@+id/action_mainPageFragment2_to_detailPageFragment2"
-            app:destination="@id/detailPageFragment2" />
-    </fragment>
-
 </navigation>
