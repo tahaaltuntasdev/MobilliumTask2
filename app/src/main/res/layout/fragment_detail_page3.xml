@@ -16,7 +16,7 @@
         style="@style/textStyleTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/refresh_img"/>
 
 
     <TextView
@@ -34,7 +34,7 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:src="@drawable/ic_sunny"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/day"/>
@@ -76,22 +76,23 @@
         android:id="@+id/wind_img"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginStart="150dp"
         android:src="@drawable/ic_wind"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/wind"/>
+        app:layout_constraintEnd_toStartOf="@+id/wind_speed"
+        app:layout_constraintTop_toBottomOf="@id/wind"
+        app:layout_constraintBottom_toTopOf="@id/tuesday_gap_speed"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
+        android:id="@+id/wind_speed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="4dp"
         android:text="@string/wind_speed"
         style="@style/textStyleRegular"
-        app:layout_constraintStart_toEndOf="@+id/wind_img"
-        app:layout_constraintTop_toBottomOf="@id/wind"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wind"
+        app:layout_constraintBottom_toTopOf="@+id/day_tuesday"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
         android:id="@+id/friday_gap_speed"
@@ -99,7 +100,7 @@
         android:layout_height="wrap_content"
         android:text="@string/degree_gap"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="80dp"
         style="@style/textStyleMedium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
@@ -143,7 +144,7 @@
         android:layout_height="wrap_content"
         android:text="@string/day_friday"
         android:layout_marginStart="24dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="80dp"
         style="@style/textStyleMedium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
@@ -186,7 +187,7 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:src="@drawable/ic_rainy"
-        android:layout_marginBottom="33dp"
+        android:layout_marginBottom="70dp"
         app:layout_constraintStart_toEndOf="@id/day_friday"
         app:layout_constraintEnd_toStartOf="@id/friday_gap_speed"
         app:layout_constraintBottom_toBottomOf="parent"/>
@@ -229,9 +230,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Verileri Güncelle"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/refresh_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/refresh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
