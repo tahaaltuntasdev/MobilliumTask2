@@ -36,7 +36,7 @@ class DetailPageFragment3 : Fragment() {
             binding.cityName.text = cityData?.city
         }
 
-        binding.weatherImg.setOnClickListener {
+        binding.refreshImg.setOnClickListener {
             dataRefresh()
         }
 
